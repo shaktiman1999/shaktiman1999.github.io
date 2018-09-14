@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enactus-BITS Pilani</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<style>
+    .anew{
+        width: 100%;
+        height: 50%;
+        float: left;
+        display: inline-block;
+    }
+    /* .vnew{
+        width: 50%;
+        height: 50%;
+        float: right;
+        display: inline-block;
+    } */
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .mySlides{display: none;}     
+    /* .thSlides{display: none;} */
+    * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sidebar{
+	position: fixed;
+    width: 200px;
+    height: 100%;
+    top:260px;
+    background: #151719;
+    left: -200px;
+
+}
+
+#sidebar.active{
+	left: 0px;
+}
+
+#sidebar ul li{
+	color:rgba(256,256,256,0.9);
+    padding: 10px 15px;
+    margin-bottom:5px;
+	border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+#sidebar .toggle-btn{
+    position: absolute;
+    top:260px;
+
+    left: 230px;
+    top: 20px;
+	
+}
+
+#sidebar .toggle-btn span{
+	display: block;
+    width: 50px;
+    height: 8px;
+	background: #151719;
+    margin : 5px 0px;
+}
+</style>
+<body>
+    
+    <a target="_blank" href="http://enactus.org"><img  id="picture1"src="images/Capture12.PNG"></a>
+    <div id="textheading">
+        <h1>BITS PILANI</h1>
+    </div>
+
+    <img  id="logo"src="images/home-logo.png">
+
+
+    <div class="searchbar">
+        <input  id="searchoption" type="text" value="Search">
+    </div>
+        <input type="image" id="align" src="images/Capture.jpg" >
+    <div>
+        <img src="bmw_black_m3_e46_tuning_96695_1920x1080.jpg" class="mySlides anew">
+        <img src="ferrari_veyron_bugatti_black_italy_red_90595_1920x1080.jpg" class="mySlides anew">
+        <img src="lamborghini_aventador_lp_750_4_sv_108049_1920x1080.jpg" class="mySlides anew">
+    </div>
+    <!-- <div>
+        <img src="bmw_black_m3_e46_tuning_96695_1920x1080.jpg" class="thSlides vnew">
+        <img src="ferrari_veyron_bugatti_black_italy_red_90595_1920x1080.jpg" class="thSlides vnew">
+        <img src="lamborghini_aventador_lp_750_4_sv_108049_1920x1080.jpg" class="thSlides vnew">
+    </div> -->
+    <script>
+            var slideIndex = 0;
+            carousel();
+    
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                // var y = document.getElementsByClassName("thSlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    // y[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1} 
+                x[slideIndex-1].style.display = "block";
+                // y[slideIndex-1].style.display = "block"; 
+                setTimeout(carousel, 3000); // Change image every 2 seconds
+            }
+    </script>
+
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSideBar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>ABOUT</li>
+            <li>PROJECTS</li>
+            <li>IMAGE GALLERY</li>
+            <li>SPONSORS</li>
+            <li>CONTACTS</li>
+        </ul>
+        </div>
+    <script>
+        function toggleSideBar(){
+            document.getElementById("sidebar").classList.toggle('active');
+        }
+    </script>  
+     <section class="slideshow">
+            <div class="content">
+                <div class="content-carrousel">
+                    <figure class="shadow"><img src="images/download (1).jpg"></figure>
+                    <figure class="shadow"><img src="images/download (2).jpg"></figure>
+                    <figure class="shadow"><img src="images/download (3).jpg"></figure>
+                    <figure class="shadow"><img src="images/download (4).jpg"></figure>
+                    <figure class="shadow"><img src="images/download (5).jpg"></figure>
+                    <figure class="shadow"><img src="images/download.jpg"></figure>
+                    <figure class="shadow"><img src="images/images (1).jpg"></figure>
+                    <figure class="shadow"><img src="images/images (2).jpg"></figure>
+                    <figure class="shadow"><img src="images/images.jpg"></figure>
+
+
+                
+                
+                
+                
+                </div>
+            </div>
+        </section> 
+    
+    </body>
+</html>

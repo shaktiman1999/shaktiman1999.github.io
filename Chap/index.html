@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML SLiders</title>
+    <style>
+    .anew{
+        width: 50%;
+        height: 50%;
+        float: left;
+        display: inline-block;
+    }
+    .vnew{
+        width: 50%;
+        height: 50%;
+        float: right;
+        display: inline-block;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .mySlides{display: none;}     
+    .thSlides{display: none;}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="bmw_black_m3_e46_tuning_96695_1920x1080.jpg" class="mySlides anew">
+        <img src="ferrari_veyron_bugatti_black_italy_red_90595_1920x1080.jpg" class="mySlides anew">
+        <img src="lamborghini_aventador_lp_750_4_sv_108049_1920x1080.jpg" class="mySlides anew">
+    </div>
+    <div>
+        <img src="bmw_black_m3_e46_tuning_96695_1920x1080.jpg" class="thSlides vnew">
+        <img src="ferrari_veyron_bugatti_black_italy_red_90595_1920x1080.jpg" class="thSlides vnew">
+        <img src="lamborghini_aventador_lp_750_4_sv_108049_1920x1080.jpg" class="thSlides vnew">
+    </div>
+    <script>
+            var slideIndex = 0;
+            carousel();
+    
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var y = document.getElementsByClassName("thSlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none"
+                    y[i].style.display = "none" 
+                }
+                slideIndex++;
+                if (slideIndex > x.length && slideIndex > y.length) {slideIndex = 1} 
+                x[slideIndex-1].style.display = "block";
+                y[slideIndex-1].style.display = "block"; 
+                setTimeout(carousel, 3000); // Change image every 2 seconds
+            }
+    </script>
+</body>
+</html>
